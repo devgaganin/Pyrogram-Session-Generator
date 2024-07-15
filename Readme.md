@@ -1,4 +1,8 @@
-# Pyrogram Session Generator
+<h1 align="center">
+  <b>Pyrogram Session String Generator Bot</b>
+</h1>
+    
+Contact: [Telegram](https://t.me/devggn)
 
 A Pyrogram session string generator to easily create session strings for your Telegram bots or user accounts made with 💕 by [Team SPY](https://t.me/devggn)
 
