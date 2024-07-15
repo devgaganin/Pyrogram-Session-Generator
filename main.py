@@ -23,6 +23,22 @@ app = Client(
     bot_token=BOT_TOKEN
 )
 
+
+def delete_session_files(user_id):
+    session_file = f"session_{user_id}.session"
+    if os.path.exists(session_file):
+        os.remove(session_file)
+    memory_file = f"session_{user_id}.session-journal"
+    if os.path.exists(memory_file):
+        os.remove(memory_file)
+
+@app.on_message(filters.command("cleardb"))
+async def clear_db(client, message):
+    user_id = message.chat.id
+    delete_session_files(user_id)
+    await message.reply("✅ Your session data and files have been cleared from memory and disk.")
+    
+
 async def session_step(client, message):
     user_id = message.chat.id
     step = user_steps.get(user_id, None)
@@ -86,7 +102,7 @@ def reset_user(user_id):
     user_steps.pop(user_id, None)
     user_data.pop(user_id, None)
 
-@app.on_message(filters.command("session"))
+@app.on_message(filters.command("generate"))
 async def login_command(client, message):
     await session_step(client, message)
 
