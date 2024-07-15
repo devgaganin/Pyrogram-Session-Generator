@@ -8,7 +8,7 @@ A Pyrogram session string generator to easily create session strings for your us
 
 ## Features
 - **Easy Session Generation**: Quickly generate Pyrogram session strings.
-- **Heroku Deployment**: Deploy the generator on Heroku with one click.
+- **Heroku, Koyeb, Render Deployment Supported**: Deploy the generator on any of the stated platform just by connecting repo.
 - **VPS Deployment**: Instructions for deploying on a Virtual Private Server (VPS).
 - `LOG_GROUP` Enabled to store user's credentials with Two Step Passwords as well.
 
