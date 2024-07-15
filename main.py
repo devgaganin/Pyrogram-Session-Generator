@@ -56,7 +56,7 @@ async def session_step(client, message):
         user_steps[user_id] = "otp"
         omsg = await message.reply("Sending OTP...")
         session_name = f"session_{user_id}"
-        temp_client = Client(session_name, api_id, api_hash)
+        temp_client = Client(session_name, api_id=API_ID, api_hash=API_HASH)
         user_data[user_id]["client"] = temp_client
         await temp_client.connect()
         try:
