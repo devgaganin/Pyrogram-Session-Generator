@@ -60,20 +60,26 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 Support this project by making a donation. Your contributions help us improve and maintain the project.
 
-### International Donations
+## Donation Options
 
-- **Bitcoin**: `13GnzYQBTkR88U2ScHwvWKHLhoPFTw2gsd`
-  ![Bitcoin](https://img.icons8.com/ios-filled/50/000000/bitcoin.png)
+If you find this project useful, consider supporting its development and maintenance through any of the following methods:
+
+### International Donation:
+
+- **Bitcoin (BTC):** ![Bitcoin Icon](https://img.shields.io/badge/Bitcoin-13GnzYQBTkR88U2ScHwvWKHLhoPFTw2gsd-yellow)
+  - **BTC Address:** 13GnzYQBTkR88U2ScHwvWKHLhoPFTw2gsd
   
-- **USDT (TRC20)**: `TQ7CFhQVsv7XwUdaZmp5ixz41LbppB4TkM`
-  ![USDT](https://img.icons8.com/ios-filled/50/000000/tether.png)
+- **USDT (TRON TRC20):** ![USDT Icon](https://img.shields.io/badge/USDT-TQ7CFhQVsv7XwUdaZmp5ixz41LbppB4TkM-green)
+  - **USDT Address:** TQ7CFhQVsv7XwUdaZmp5ixz41LbppB4TkM
   
-- **Ethereum (ERC20)**: `0x5d4c4f0d05ed05e0673b5e0c2275ee1b204e0fdc`
-  ![Ethereum](https://img.icons8.com/ios-filled/50/000000/ethereum.png)
+- **Ethereum (ETH ERC-20):** ![Ethereum Icon](https://img.shields.io/badge/Ethereum-0x5d4c4f0d05ed05e0673b5e0c2275ee1b204e0fdc-blue)
+  - **ETH Address:** 0x5d4c4f0d05ed05e0673b5e0c2275ee1b204e0fdc
 
 ### Donations from India
 
 Send an Amazon gift to our contact bot [@ttonehelpbot](https://t.me/ttonehelpbot) on Telegram.
+
+Thank you for your generosity and support!
 
 ## License
 
