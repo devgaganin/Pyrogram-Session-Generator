@@ -37,6 +37,7 @@ async def start_command(client, message):
     await message.reply(
         "Welcome to our session generator bot!\n\n"
         "To generate a session, please send /generate.\n\n"
+        "To clear session from memory send /cleardb.\n\n"
         "**__Powered by Team SPY__**"
     )
 
