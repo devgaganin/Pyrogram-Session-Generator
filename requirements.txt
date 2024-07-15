@@ -1,0 +1,7 @@
+#devggn
+
+tgcrypto
+pyrogram
+flask
+gunicorn
+werkzeug==2.2.2
