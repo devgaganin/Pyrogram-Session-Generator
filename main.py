@@ -32,6 +32,14 @@ def delete_session_files(user_id):
     if os.path.exists(memory_file):
         os.remove(memory_file)
 
+@app.on_message(filters.command("start"))
+async def start_command(client, message):
+    await message.reply(
+        "Welcome to our session generator bot!\n\n"
+        "To generate a session, please send /generate.\n\n"
+        "**__Powered by Team SPY__**"
+    )
+
 @app.on_message(filters.command("cleardb"))
 async def clear_db(client, message):
     user_id = message.chat.id
